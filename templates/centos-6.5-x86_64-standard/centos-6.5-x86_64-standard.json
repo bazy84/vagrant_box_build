@@ -2,18 +2,18 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-      "name": "centos-6.5-x86_64-standard",
+      "name": "centos-6.5-x86_64-bazy84",
       "guest_os_type": "RedHat_64",
       "virtualbox_version_file": ".vbox_version",
 
       "disk_size": 20480,
       "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--memory", "480" ],
+        [ "modifyvm", "{{.Name}}", "--memory", "1024" ],
         [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
       ],
 
-      "iso_url": "file:///Users/lfrancke/Downloads/isos/CentOS-6.5-x86_64-minimal.iso",
-      "iso_checksum": "0d9dc37b5dd4befa1c440d2174e88a87",
+      "iso_url": "file:///mnt/seagate/ISOs/CentOS-6.5-x86_64-bin-DVD1.iso",
+      "iso_checksum": "83221db52687c7b857e65bfe60787838",
       "iso_checksum_type": "md5",
 
       "http_directory": "templates/centos-6.5-x86_64-standard/http",
@@ -38,8 +38,8 @@
         "scripts/centos/virtualbox.sh",
         "scripts/centos/vagrant.sh",
         "templates/centos-6.5-x86_64-standard/scripts/epel.sh",
-        "scripts/centos/cleanup.sh",
-        "scripts/centos/zerodisk.sh"
+        "scripts/centos/puppet.sh",
+        "scripts/centos/cleanup.sh"
       ],
       "execute_command": "sudo -E sh '{{ .Path }}'"
     }
