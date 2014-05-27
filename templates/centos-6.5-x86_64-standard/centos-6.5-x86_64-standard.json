@@ -12,7 +12,7 @@
         [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
       ],
 
-      "iso_url": "file:///mnt/seagate/ISOs/CentOS-6.5-x86_64-bin-DVD1.iso",
+      "iso_url": "file:///mnt/caddy/Downloads/CentOS-6.5-x86_64-bin-DVD1.iso",
       "iso_checksum": "83221db52687c7b857e65bfe60787838",
       "iso_checksum_type": "md5",
 
